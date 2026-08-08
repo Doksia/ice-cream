@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import IceCreamDetailsPage from './pages/IceCreamDetailsPage'
 import AddIceCreamPage from './pages/AddIceCreamPage'
+import EditIceCreamPage from './pages/EditIceCreamPage'
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
         <Route path='/ice-creams' element={<AllIceCreamsPage />} />
         <Route path='/ice-creams/:iceCreamId' element={<IceCreamDetailsPage />} />
         <Route path='/new-ice-cream' element={<AddIceCreamPage />} />
+        <Route path="/edit-ice-cream/:iceCreamId" element={<EditIceCreamPage />}
+/>
       </Routes>
       <Footer />
     </>
