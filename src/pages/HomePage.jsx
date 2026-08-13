@@ -1,9 +1,8 @@
-import Search from "../components/Search";
+
 function HomePage() {
     return(
-        <div>
-        <h1>Home Page</h1>
-        <Search />
+        <div className="home-page">
+        <h1>Ice Creams</h1>
         </div>
     );
 }

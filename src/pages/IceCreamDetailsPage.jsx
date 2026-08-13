@@ -1,33 +1,43 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-function IceCreamDetailsPage(){
-        
-    const [iceCream, setIcream] = useState({});
-    const {iceCreamId} = useParams();
-    useEffect(() => {
-        axios
-        .get(`http://localhost:5005/icecreams/${iceCreamId}`)
-        .then((response) => {
-            setIcream(response.data);
-        })
-        .catch((error) => {
-            console.log("Error fetching the ice cream details", error);
-        })
-    }, [iceCreamId])
-    
-    return(
-        <div>
-            <img src={iceCream.img} alt="" />
-            <h2>{iceCream.name}</h2>
-            <p>{iceCream.description}</p>
-            <p>{iceCream.flavor}</p>
-            <p>{iceCream.brand}</p>
-            <p>Price: {iceCream.price}$</p>
-            <p>Stock: {iceCream.stock}</p>
-        </div>
-    );
 
+function IceCreamDetailsPage() {
+  const [iceCream, setIceCream] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  const { iceCreamId } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5005/icecreams/${iceCreamId}`)
+      .then((response) => setIceCream(response.data))
+      .catch(() => {
+        alert("Ice cream not found");
+        navigate("/ice-creams");
+      })
+      .finally(() => setLoading(false));
+  }, [iceCreamId]);
+
+  if (loading) return <p>Loading...</p>;
+
+  return (
+    <div className="details-card">
+      <img src={iceCream.img} alt={iceCream.name} />
+
+      <div>
+        <h2>{iceCream.name}</h2>
+        <p>Description: {iceCream.description}</p>
+        <p>Flavor: {iceCream.flavor}</p>
+        <p>Brand: {iceCream.brand}</p>
+        <p>Price: {iceCream.price}$</p>
+        <p>Stock: {iceCream.stock}</p>
+
+        <button onClick={() => navigate(-1)}>Back</button>
+      </div>
+    </div>
+  );
 }
 
 export default IceCreamDetailsPage;

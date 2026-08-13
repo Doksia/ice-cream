@@ -1,39 +1,117 @@
-nav {
-  background-color: red;
+body {
+  margin: 0;
+  color: white;
+  background-color: #FB9DA7;
+}
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ffbfc5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.details-card {
+  align-items: center;
+  justify-self: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.rating {
+  font-size: 20px;
+}
+a {
   color: white;
 }
 
-footer {
-  background-color: green;
+header img {
+  width: 50px;
+  height: 50px;
 }
+
+ul {
+  display: flex;
+}
+
+li {
+  margin: 20px;
+  list-style: none;
+}
+
 
 img {
   height: 200px;
   width: 200px;
+  border-radius: 50%;
 }
 
 .card-ice-cream {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .ice-cream-container {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(4, 1fr);
 }
 
 a {
   text-decoration: none;
 }
-button {
-  margin: 10px;
-}
+
 h1 {
   text-align: center;
 }
 
-body {
+
+
+button {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #FB9DA7;
+  background-color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+form {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  color: #FB9DA7;
+  padding: 10px;
+  text-align: center;
+}
+
+form button {
+  color: white;
   background-color: #FB9DA7;
+}
+
+.home-page {
+  background-image: url("https://img.magnific.com/free-photo/abstract-soft-pastel-colorful-background_306501-871.jpg");
+  background-size: cover;
+  height: 500px;
+
+}
+
+h1 {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+  color: #FB9DA7;
 }

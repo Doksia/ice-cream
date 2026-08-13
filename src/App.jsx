@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import AllIceCreamsPage from './pages/AllIceCreamsPage'
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path='/' element={<HomePage />}/>
         <Route path='/ice-creams' element={<AllIceCreamsPage />} />
