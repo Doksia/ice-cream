@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   color: white;
@@ -15,6 +17,45 @@ header {
   
 }
 
+/* Contenedor del carousel */
+.ice-carousel {
+  max-width: 500px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+/* Imágenes */
+.ice-carousel img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Texto del caption */
+.carousel-caption h3 {
+  padding: 10px 20px;
+  color: #ff4fa3;
+  font-weight: bold;
+}
+
+/* Botones de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%) sepia(20%) saturate(300%) hue-rotate(300deg);
+  width: 40px;
+  height: 40px;
+}
+
+/* Puntos indicadores */
+.carousel-indicators button {
+  background-color: #ffb3d9 !important;
+}
+
+.carousel-indicators .active {
+  background-color: #ff4fa3 !important;
+}
+
+
 .details-card {
   align-items: center;
   justify-self: center;
@@ -28,6 +69,7 @@ header {
 }
 a {
   color: white;
+  text-decoration: none;
 }
 
 header img {
@@ -48,7 +90,7 @@ li {
 img {
   height: 200px;
   width: 200px;
-  border-radius: 50%;
+  border-radius: 30px;
 }
 
 .card-ice-cream {
@@ -62,19 +104,17 @@ img {
 
 .ice-cream-container {
   display: grid;
-  gap: 20px;
+  gap: 50px;
   grid-template-columns: repeat(4, 1fr);
 }
 
-a {
-  text-decoration: none;
+p {
+  font-size: 22.5px;
 }
 
-h1 {
-  text-align: center;
+span {
+  color: #b62e55;
 }
-
-
 
 button {
   margin: 10px;
@@ -86,32 +126,146 @@ button {
   font-size: 20px;
 }
 
-form {
+.form {
   justify-self: center;
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 10px;
-  color: #FB9DA7;
+  color: #bd636c;
   padding: 10px;
+  text-align: center;
+  background-image: url("https://img.magnific.com/free-photo/abstract-soft-pastel-colorful-background_306501-871.jpg");
+  background-size: cover;
+  width: 400px;
+  height: 450px;
+}
+
+
+.form button {
+  color: white;
+  background-color: #FB9DA7;
+  margin-top: 15px;
+}
+
+
+.home-page {
+  justify-content: center;
+  align-items: center;
+}
+
+.wordart{
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff7bd5, #ffb3f4, #ffe6fa);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 3px 3px 0px #ff4fa3, 6px 6px 0px #ff99cc;
+  font-family: 'Comic Sans MS', cursive;
+   /* IMPORTANTE para que transform funcione bien */
+  transform: rotate(-8deg);   /* abajo izquierda → arriba derecha */
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  padding: 0;
+  margin: 20px;
+  color: white;
+}
+
+img{
   text-align: center;
 }
 
-form button {
+.details-card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 60px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.details-card img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.details-info {
+  flex: 1;
+}
+
+.details-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ff4f81;
+  font-family: 'Poppins', sans-serif;
+}
+
+.details-info p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #444;
+}
+
+.back-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ffb3d9;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #ff4f81;
   color: white;
-  background-color: #FB9DA7;
 }
 
-.home-page {
-  background-image: url("https://img.magnific.com/free-photo/abstract-soft-pastel-colorful-background_306501-871.jpg");
-  background-size: cover;
-  height: 500px;
+h2 {
+  font-size: 30px;
+  color: #b62e55;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px 15px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 15px;
+  border: 2px solid #ffb3d9;
+  font-size: 1.1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+  .page {
+  min-height: 100vh;   /* ocupa toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+
 
 }
 
-h1 {
-  font-size: 50px;
-  padding: 0;
-  margin: 0;
-  color: #FB9DA7;
+.content {
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }

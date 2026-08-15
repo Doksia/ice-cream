@@ -1,8 +1,13 @@
+import IceCreamCarousel from "../components/IceCreamCarousel";
+
 
 function HomePage() {
+    
+    
     return(
         <div className="home-page">
-        <h1>Ice Creams</h1>
+            <h1 class="wordart">ICE CREAMS</h1>
+            <IceCreamCarousel />
         </div>
     );
 }

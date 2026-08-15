@@ -1,6 +1,6 @@
 function IceCreamForm({ iceCream, onChange, onSubmit, buttonLabel }) {
   return (
-    <form className="ice-cream-form" onSubmit={onSubmit}>
+    <form className="form" onSubmit={onSubmit}>
       <label>Image</label>
       <input
         type="url"
