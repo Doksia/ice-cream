@@ -1,12 +1,12 @@
+import Upload from "../components/Upload";
+
 function IceCreamForm({ iceCream, onChange, onSubmit, buttonLabel }) {
   return (
     <form className="form" onSubmit={onSubmit}>
+      
       <label>Image</label>
-      <input
-        type="url"
-        value={iceCream.img}
-        onChange={(e) => onChange("img", e.target.value)}
-      />
+      <Upload onUpload={(url) => onChange("img", url)} />
+
 
       <label>Name</label>
       <input
