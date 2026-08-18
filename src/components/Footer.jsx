@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <footer class="footer">
+        <footer className="footer">
     © 2026 Rosa Ice Creams
   </footer>
     );

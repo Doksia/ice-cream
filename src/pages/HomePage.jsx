@@ -6,7 +6,7 @@ function HomePage() {
     
     return(
         <div className="home-page">
-            <h1 class="wordart">ICE CREAMS</h1>
+            <h1 className="wordart">ICE CREAMS</h1>
             <IceCreamCarousel />
         </div>
     );
