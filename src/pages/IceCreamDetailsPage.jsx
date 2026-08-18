@@ -18,7 +18,7 @@ function IceCreamDetailsPage() {
         navigate("/ice-creams");
       })
       .finally(() => setLoading(false));
-  }, [iceCreamId]);
+  }, [iceCreamId, navigate]);
 
   if (loading) return <p>Loading...</p>;
 
