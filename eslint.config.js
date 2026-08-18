@@ -4,6 +4,13 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
+import express from 'express';
+import cors from 'cors'; 
+
+const app = express();
+
+app.use(cors());
+
 export default defineConfig([
   globalIgnores(['dist']),
   {

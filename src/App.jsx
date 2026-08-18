@@ -11,18 +11,21 @@ import EditIceCreamPage from './pages/EditIceCreamPage'
 function App() {
 
   return (
-    <>
+    <div className='page'>
       <Header />
-      <Routes>
-        <Route path='/' element={<HomePage />}/>
-        <Route path='/ice-creams' element={<AllIceCreamsPage />} />
-        <Route path='/ice-creams/:iceCreamId' element={<IceCreamDetailsPage />} />
-        <Route path='/new-ice-cream' element={<AddIceCreamPage />} />
-        <Route path="/edit-ice-cream/:iceCreamId" element={<EditIceCreamPage />}
-/>
-      </Routes>
+      <main className='content'>
+        <Routes>
+          <Route path='/' element={<HomePage />}/>
+          <Route path='/ice-creams' element={<AllIceCreamsPage />} />
+          <Route path='/ice-creams/:iceCreamId' element={<IceCreamDetailsPage />} />
+          <Route path='/new-ice-cream' element={<AddIceCreamPage />} />
+          <Route path="/edit-ice-cream/:iceCreamId" element={<EditIceCreamPage />}
+  />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </div>
+    
   )
 }
 

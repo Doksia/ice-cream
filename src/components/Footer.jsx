@@ -1,10 +1,8 @@
 function Footer() {
     return(
-        <footer>
-            <p>Todos los derechos reservados</p>
-            <p>Telephone: XXX-XXX-XXXX</p>
-            <p>Email: xxxxx@icecream.com</p>
-        </footer>
+        <footer className="footer">
+    © 2026 M&M Ice Creams
+  </footer>
     );
 }
 

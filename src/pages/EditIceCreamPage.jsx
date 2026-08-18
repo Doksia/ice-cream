@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import LoadingSpinner from "../components/LoadingSpinner";
 import IceCreamForm from "./IceCreamForm";
 
 function EditIceCreamPage() {
@@ -35,8 +36,7 @@ function EditIceCreamPage() {
       .catch(() => alert("Error updating ice cream"));
   };
 
-  if (!iceCream) return <p>Loading...</p>;
-
+  if (!iceCream) return <LoadingSpinner />;
   return (
     <div>
       <h1>Edit ice cream</h1>

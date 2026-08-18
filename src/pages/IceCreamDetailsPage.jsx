@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import LoadingSpinner from "../components/LoadingSpinner";
 import axios from "axios";
 
 function IceCreamDetailsPage() {
@@ -20,7 +21,10 @@ function IceCreamDetailsPage() {
       .finally(() => setLoading(false));
   }, [iceCreamId, navigate]);
 
-  if (loading) return <p>Loading...</p>;
+  
+
+if (loading) return <LoadingSpinner />;
+
 
   return (
     <div className="details-card">
@@ -28,12 +32,11 @@ function IceCreamDetailsPage() {
 
       <div>
         <h2>{iceCream.name}</h2>
-        <p>Description: {iceCream.description}</p>
-        <p>Flavor: {iceCream.flavor}</p>
-        <p>Brand: {iceCream.brand}</p>
-        <p>Price: {iceCream.price}$</p>
-        <p>Stock: {iceCream.stock}</p>
-
+        <p><span>Flavor:</span> {iceCream.flavor}</p>
+        <p><span>Brand:</span> {iceCream.brand}</p>
+        <p><span>Price:</span> {iceCream.price}$</p>
+        <p><span>Stock:</span> {iceCream.stock}</p>
+        <p><span>Description:</span> {iceCream.description}</p>
         <button onClick={() => navigate(-1)}>Back</button>
       </div>
     </div>
