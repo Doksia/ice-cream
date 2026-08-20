@@ -28,17 +28,19 @@ if (loading) return <LoadingSpinner />;
 
   return (
     <div className="details-card">
-      <img src={iceCream.img} alt={iceCream.name} />
-
       <div>
-        <h2>{iceCream.name}</h2>
-        <p><span>Flavor:</span> {iceCream.flavor}</p>
-        <p><span>Brand:</span> {iceCream.brand}</p>
-        <p><span>Price:</span> {iceCream.price}$</p>
-        <p><span>Stock:</span> {iceCream.stock}</p>
-        <p><span>Description:</span> {iceCream.description}</p>
-        <button onClick={() => navigate(-1)}>Back</button>
+        <img src={iceCream.img} alt={iceCream.name} />
+
+        <div>
+          <h2>{iceCream.name}</h2>
+          <p><span>Flavor:</span> {iceCream.flavor}</p>
+          <p><span>Brand:</span> {iceCream.brand}</p>
+          <p><span>Price:</span> {iceCream.price}$</p>
+          <p><span>Stock:</span> {iceCream.stock}</p>
+          <p><span>Description:</span> {iceCream.description}</p>
+        </div>
       </div>
+      <button onClick={() => navigate(-1)}>Back</button>
     </div>
   );
 }

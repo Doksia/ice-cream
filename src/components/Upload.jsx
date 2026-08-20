@@ -16,7 +16,7 @@ export default function Upload({ onUpload }) {
 
     const json = await res.json();
 
-    // Guarda la URL completa
+    // Enviar la URL completa, no el public_id
     onUpload(json.secure_url);
   };
 

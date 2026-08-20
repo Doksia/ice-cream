@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import IceCreamListPage from "./IceCreamListPage";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 function AllIceCreamsPage() {
   const [iceCreams, setIceCreams] = useState([]);
@@ -32,7 +33,7 @@ function AllIceCreamsPage() {
       .catch(() => alert("Error deleting ice cream"));
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingSpinner />;
   if (error) return <p className="error">{error}</p>;
 
   return (
@@ -46,10 +47,28 @@ function AllIceCreamsPage() {
       <div className="ice-cream-container">
         {filtered.map((iceCream) => (
           <div key={iceCream.id} className="card-ice-cream">
-            <h2>{iceCream.name}</h2>
+            <svg width="340" height="70">
+
+
+
+  <defs>
+    <path id="curvaH2" d="M0,50 Q170,0 340,50" />
+
+
+
+  </defs>
+
+  <text class="curveado">
+    <textPath href="#curvaH2" startOffset="50%" text-anchor="middle">
+      {iceCream.name}
+    </textPath>
+  </text>
+</svg>
+
+
 
             <Link to={`/ice-creams/${iceCream.id}`}>
-              <img src={iceCream.img} alt={iceCream.name} />
+              <img className="img-default" src={iceCream.img} alt={iceCream.name} />
             </Link>
 
             <p><span>Price:</span> {iceCream.price}$</p>
