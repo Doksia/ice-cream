@@ -1,13 +1,23 @@
 /* -------------------- RESET -------------------- */
+html, body {
+  height: 100%;
+}
+
 body {
-  margin: 0;
   color: #ca497a;
   background-color: #FB9DA7;
+  min-width: fit-content;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.all-ice-creams {
+  min-height: calc(100vh - 80px); /* 80px = altura del header */
 }
 
 
@@ -25,9 +35,15 @@ header img {
   height: 50px;
 }
 
+.all-ice-creams {
+  height: 100%;
+}
+
 /* -------------------- NAV -------------------- */
 ul {
   display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 li {
@@ -114,7 +130,7 @@ a {
 
 .ice-cream-container {
   display: grid;
-  max-width: 100%;
+  width: 100%;
   gap: 100px 0;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -123,7 +139,7 @@ a {
 p {
   font-size: 22.5px;
   color: black;
-  margin: 0;
+  margin: 10px;
 }
 
 span {
@@ -256,7 +272,7 @@ h2 {
 .search-input {
   width: 300px;
   padding: 12px 15px;
-  margin: 50px auto;
+  margin: 20px auto;
   display: block;
   border-radius: 15px;
   border: 2px solid #ffb3d9;
@@ -269,12 +285,18 @@ h2 {
 .page {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+}
 
+.page {
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
 }
 
 .content {
   flex: 1;
+  display: flex;
 }
 
 .footer {
@@ -303,3 +325,12 @@ h2 {
 }
 
 
+
+
+
+
+
+.all-ice-creams {
+  flex: 1;
+  width: 100%;
+}

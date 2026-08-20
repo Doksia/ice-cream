@@ -37,7 +37,7 @@ function AllIceCreamsPage() {
   if (error) return <p className="error">{error}</p>;
 
   return (
-    <div>
+    <div className="all-ice-creams">
       <IceCreamListPage iceCreams={iceCreams} onFilter={setFiltered} />
 
       <h1>All Ice Creams</h1>
