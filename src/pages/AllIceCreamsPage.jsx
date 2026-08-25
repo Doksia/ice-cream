@@ -3,12 +3,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import IceCreamListPage from "./IceCreamListPage";
 import LoadingSpinner from "../components/LoadingSpinner";
+import API_URL from "../services/api"
 
 function AllIceCreamsPage() {
+
   const [iceCreams, setIceCreams] = useState([]);
   const [filtered, setFiltered] = useState([]); // ← nuevo estado
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  console.log("API_URL:", import.meta.env.VITE_API_URL);
 
   useEffect(() => {
     axios
