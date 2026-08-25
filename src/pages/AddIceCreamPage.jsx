@@ -3,9 +3,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import IceCreamForm from "./IceCreamForm";
 
-VITE_API_URL = import.meta.env.VITE_API_URL
+
 function AddIceCreamPage() {
-  
+  VITE_API_URL = import.meta.env.VITE_API_URL
 
   const [iceCream, setIceCream] = useState({
     img: "",

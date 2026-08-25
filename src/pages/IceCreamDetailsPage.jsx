@@ -3,9 +3,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import axios from "axios";
 
-VITE_API_URL = import.meta.env.VITE_API_URL
-function IceCreamDetailsPage() {
 
+function IceCreamDetailsPage() {
+VITE_API_URL = import.meta.env.VITE_API_URL
   const [iceCream, setIceCream] = useState({});
   const [loading, setLoading] = useState(true);
 
