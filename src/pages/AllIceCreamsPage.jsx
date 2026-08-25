@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import API_URL from "../config"
 import { Link } from "react-router-dom";
 import IceCreamListPage from "./IceCreamListPage";
 import LoadingSpinner from "../components/LoadingSpinner";
