@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import IceCreamListPage from "./IceCreamListPage";
 import LoadingSpinner from "../components/LoadingSpinner";
-import API_URL from "../services/api"
 
 function AllIceCreamsPage() {
 
