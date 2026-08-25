@@ -11,7 +11,7 @@ function AllIceCreamsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = import.meta.env.VITE_API_URL;
+  
 
 
   useEffect(() => {
