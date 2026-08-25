@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import IceCreamForm from "./IceCreamForm";
+import API_URL from "../config"
+
 
 function AddIceCreamPage() {
   const [iceCream, setIceCream] = useState({
@@ -24,7 +26,7 @@ function AddIceCreamPage() {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5005/icecreams", {
+      .post(`${API_URL}/icecreams`, {
         ...iceCream,
         price: +iceCream.price,
         stock: +iceCream.stock,

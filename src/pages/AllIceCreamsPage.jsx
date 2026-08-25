@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API_URL from "../config"
 import { Link } from "react-router-dom";
 import IceCreamListPage from "./IceCreamListPage";
 import LoadingSpinner from "../components/LoadingSpinner";
@@ -12,7 +13,7 @@ function AllIceCreamsPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5005/icecreams")
+      .get(`${API_URL}/icecreams`)
       .then((response) => {
         setIceCreams(response.data);
         setFiltered(response.data); // mostrar todos al inicio
@@ -25,7 +26,7 @@ function AllIceCreamsPage() {
     if (!confirm("Are you sure you want to delete this ice cream?")) return;
 
     axios
-      .delete(`http://localhost:5005/icecreams/${id}`)
+      .delete(`${API_URL}/icecreams/${id}`)
       .then(() => {
         setIceCreams((prev) => prev.filter((ice) => ice.id !== id));
         setFiltered((prev) => prev.filter((ice) => ice.id !== id));

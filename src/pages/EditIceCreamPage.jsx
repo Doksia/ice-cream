@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import IceCreamForm from "./IceCreamForm";
+import API_URL from "../config"
 
 function EditIceCreamPage() {
   const [iceCream, setIceCream] = useState(null);
@@ -11,7 +12,7 @@ function EditIceCreamPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/icecreams/${iceCreamId}`)
+      .get(`${API_URL}/icecreams/${iceCreamId}`)
       .then((res) => setIceCream(res.data))
       .catch(() => {
         alert("Ice cream not found");
@@ -27,7 +28,7 @@ function EditIceCreamPage() {
     e.preventDefault();
 
     axios
-      .put(`http://localhost:5005/icecreams/${iceCreamId}`, {
+      .put(`${API_URL}/icecreams/${iceCreamId}`, {
         ...iceCream,
         price: +iceCream.price,
         stock: +iceCream.stock,

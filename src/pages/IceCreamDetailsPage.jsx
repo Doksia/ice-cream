@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import axios from "axios";
+import API_URL from "../config"
 
 function IceCreamDetailsPage() {
   const [iceCream, setIceCream] = useState({});
@@ -12,7 +13,7 @@ function IceCreamDetailsPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/icecreams/${iceCreamId}`)
+      .get(`${API_URL}/${iceCreamId}`)
       .then((response) => setIceCream(response.data))
       .catch(() => {
         alert("Ice cream not found");
