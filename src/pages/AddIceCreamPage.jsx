@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import IceCreamForm from "./IceCreamForm";
+import API_URL from "../services/api"
 
 
 function AddIceCreamPage() {
