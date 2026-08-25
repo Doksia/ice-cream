@@ -4,6 +4,8 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import axios from "axios";
 
 function IceCreamDetailsPage() {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [iceCream, setIceCream] = useState({});
   const [loading, setLoading] = useState(true);
 
