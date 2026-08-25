@@ -10,6 +10,7 @@ function EditIceCreamPage() {
   const [iceCream, setIceCream] = useState(null);
   const { iceCreamId } = useParams();
   const navigate = useNavigate();
+const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     axios

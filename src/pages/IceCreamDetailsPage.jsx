@@ -8,6 +8,7 @@ function IceCreamDetailsPage() {
 
   const [iceCream, setIceCream] = useState({});
   const [loading, setLoading] = useState(true);
+const API_URL = import.meta.env.VITE_API_URL;
 
   const { iceCreamId } = useParams();
   const navigate = useNavigate();

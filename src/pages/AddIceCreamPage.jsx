@@ -6,6 +6,8 @@ import API_URL from "../services/api"
 
 
 function AddIceCreamPage() {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [iceCream, setIceCream] = useState({
     img: "",
     name: "",
