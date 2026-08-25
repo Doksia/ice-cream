@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import IceCreamForm from "./IceCreamForm";
 
+VITE_API_URL = import.meta.env.VITE_API_URL
 function EditIceCreamPage() {
 
   const [iceCream, setIceCream] = useState(null);
