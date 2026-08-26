@@ -14,7 +14,7 @@ function IceCreamDetailsPage() {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/icecreams/${iceCreamId}`)
+      .get(`${API_URL}/ice-creams/${iceCreamId}`)
       .then((response) => setIceCream(response.data))
       .catch(() => {
         alert("Ice cream not found");
