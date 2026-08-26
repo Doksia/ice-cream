@@ -73,7 +73,7 @@ function AllIceCreamsPage() {
 
 
 
-            <Link to={`/ice-creams/${iceCream.id}`}>
+            <Link to={`/icecreams/${iceCream.id}`}>
               <img className="img-default" src={iceCream.img} alt={iceCream.name} />
             </Link>
 
@@ -81,7 +81,7 @@ function AllIceCreamsPage() {
             <p><span>Stock:</span> {iceCream.stock}</p>
 
             <div>
-              <Link to={`/edit-ice-cream/${iceCream.id}`}>
+              <Link to={`/edit-icecream/${iceCream.id}`}>
                 <button>Edit</button>
               </Link>
 
