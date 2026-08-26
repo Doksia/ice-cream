@@ -18,7 +18,7 @@ function EditIceCreamPage() {
       .then((res) => setIceCream(res.data))
       .catch(() => {
         alert("Ice cream not found");
-        navigate("/ice-creams");
+        navigate("/icecreams");
       });
   }, [iceCreamId]);
 
@@ -35,7 +35,7 @@ function EditIceCreamPage() {
         price: +iceCream.price,
         stock: +iceCream.stock,
       })
-      .then(() => navigate("/ice-creams"))
+      .then(() => navigate("/icecreams"))
       .catch(() => alert("Error updating ice cream"));
   };
 

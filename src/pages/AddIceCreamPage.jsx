@@ -32,7 +32,7 @@ function AddIceCreamPage() {
         price: +iceCream.price,
         stock: +iceCream.stock,
       })
-      .then(() => navigate("/ice-creams"))
+      .then(() => navigate("/icecreams"))
       .catch(() => alert("Error creating ice cream"));
   };
 

@@ -18,7 +18,7 @@ function IceCreamDetailsPage() {
       .then((response) => setIceCream(response.data))
       .catch(() => {
         alert("Ice cream not found");
-        navigate("/ice-creams");
+        navigate("/icecreams");
       })
       .finally(() => setLoading(false));
   }, [iceCreamId, navigate]);
