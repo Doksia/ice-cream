@@ -15,6 +15,7 @@ function AllIceCreamsPage() {
 
 
   useEffect(() => {
+    
     axios
       .get(`${API_URL}/icecreams`)
       .then((response) => {
