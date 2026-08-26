@@ -18,10 +18,10 @@ function App() {
       <main className='content'>
         <Routes>
           <Route path='/' element={<HomePage />}/>
-          <Route path='/ice-creams' element={<AllIceCreamsPage />} />
-          <Route path='/ice-creams/:iceCreamId' element={<IceCreamDetailsPage />} />
-          <Route path='/new-ice-cream' element={<AddIceCreamPage />} />
-          <Route path="/edit-ice-cream/:iceCreamId" element={<EditIceCreamPage />}
+          <Route path='/icecreams' element={<AllIceCreamsPage />} />
+          <Route path='/icecreams/:iceCreamId' element={<IceCreamDetailsPage />} />
+          <Route path='/new-icecream' element={<AddIceCreamPage />} />
+          <Route path="/edit-icecream/:iceCreamId" element={<EditIceCreamPage />}
   />
         </Routes>
       </main>
