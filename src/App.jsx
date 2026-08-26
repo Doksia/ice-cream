@@ -21,8 +21,7 @@ function App() {
           <Route path='/icecreams' element={<AllIceCreamsPage />} />
           <Route path='/icecreams/:iceCreamId' element={<IceCreamDetailsPage />} />
           <Route path='/new-icecream' element={<AddIceCreamPage />} />
-          <Route path="/edit-icecream/:iceCreamId" element={<EditIceCreamPage />}
-  />
+          <Route path="/edit-icecream/:iceCreamId" element={<EditIceCreamPage />} />
         </Routes>
       </main>
       <Footer />
