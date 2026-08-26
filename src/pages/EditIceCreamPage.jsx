@@ -3,13 +3,14 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 import IceCreamForm from "./IceCreamForm";
+import { API_URL } from "../config";
 
 function EditIceCreamPage() {
 
   const [iceCream, setIceCream] = useState(null);
   const { iceCreamId } = useParams();
   const navigate = useNavigate();
-const API_URL = import.meta.env.VITE_API_URL;
+
 
   useEffect(() => {
     axios

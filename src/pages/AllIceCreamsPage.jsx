@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import IceCreamListPage from "./IceCreamListPage";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { API_URL } from "../config";
 
 function AllIceCreamsPage() {
 
@@ -11,7 +12,7 @@ function AllIceCreamsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = import.meta.env.VITE_API_URL;
+  
 
 
   useEffect(() => {
