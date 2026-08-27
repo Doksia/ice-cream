@@ -43,16 +43,16 @@ function AllIceCreamsPage() {
   if (error) return <p className="error">{error}</p>;
 
   return (
-    <div className="all-ice-creams">
+    <div>
       <IceCreamListPage iceCreams={iceCreams} onFilter={setFiltered} />
 
       <h1>All Ice Creams</h1>
 
       {filtered.length === 0 && <p>No ice creams found</p>}
 
-      <div className="ice-cream-container">
+      <div className="icecream-container">
         {filtered.map((iceCream) => (
-          <div key={iceCream.id} className="card-ice-cream">
+          <div key={iceCream.id} className="card-icecream">
             <svg width="340" height="70">
 
 

@@ -18,8 +18,6 @@ body {
 
 
 
-
-
 /* -------------------- HEADER -------------------- */
 header {
   background-color: #ffbfc5;
@@ -33,9 +31,7 @@ header img {
   height: 50px;
 }
 
-.all-ice-creams {
-  height: 100%;
-}
+
 
 /* -------------------- NAV -------------------- */
 ul {
@@ -118,7 +114,7 @@ a {
 }
 
 /* -------------------- ICE CREAM GRID -------------------- */
-.card-ice-cream {
+.card-icecream {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +122,7 @@ a {
   border-radius: 10px;
 }
 
-.ice-cream-container {
+.icecream-container {
   display: grid;
   width: 100%;
   gap: 100px 0;
@@ -296,11 +292,6 @@ h2 {
   margin: 0;
 }
 
-.ice-creams {
-  min-height: calc(100vh - 80px); /* 80px = altura del header */
-  flex: 1;
-  width: 100%;
-}
 
 .home-page {
   flex: fit-content;

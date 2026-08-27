@@ -17,7 +17,7 @@ function App() {
       <Header />
       <main className='content'>
         <Routes>
-          <Route path='/' element={<HomePage />}/>
+          <Route path='/' element={<HomePage />} />
           <Route path='/icecreams' element={<AllIceCreamsPage />} />
           <Route path='/icecreams/:iceCreamId' element={<IceCreamDetailsPage />} />
           <Route path='/new-icecream' element={<AddIceCreamPage />} />
