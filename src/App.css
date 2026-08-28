@@ -16,6 +16,14 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* Fix parent container */
+/* Fix parent container */
+/* FIX: allow responsive layout */
+
+
+
+
+
 
 
 /* -------------------- HEADER -------------------- */
@@ -128,6 +136,74 @@ a {
   gap: 100px 0;
   grid-template-columns: repeat(4, 1fr);
 }
+
+/* FIX: allow responsive layout */
+.content {
+  flex: 1;
+  width: 100%;
+  display: block;
+}
+
+/* Tablet */
+/* Ocultar hamburguesa en desktop */
+.hamburger {
+  display: none;
+  font-size: 35px;
+  background: none;
+  border: none;
+  color: #ca497a;
+  cursor: pointer;
+}
+
+/* Navbar móvil oculto por defecto */
+.navbar-mobile {
+  display: none;
+  flex-direction: column;
+  background-color: #ffbfc5;
+  padding: 20px;
+}
+
+/* Navbar desktop visible por defecto */
+.navbar-desktop {
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .icecream-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: flex;
+  }
+
+  .navbar-mobile ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .icecream-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+
+/* Vista móvil */
+
 
 
 p {
@@ -257,11 +333,6 @@ h2 {
   flex-direction: column;
 }
 
-.content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
 
 .footer {
   text-align: center;
