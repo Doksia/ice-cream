@@ -122,6 +122,8 @@ a {
 }
 
 /* -------------------- ICE CREAM GRID -------------------- */
+
+
 .card-icecream {
   display: flex;
   justify-content: center;
@@ -131,10 +133,9 @@ a {
 }
 
 .icecream-container {
-  display: grid;
-  width: 100%;
-  gap: 100px 0;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* FIX: allow responsive layout */
@@ -170,10 +171,6 @@ a {
 
 /* Tablet */
 @media (max-width: 768px) {
-  .icecream-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
-  }
 
   .hamburger {
     display: block;
@@ -194,12 +191,7 @@ a {
 }
 
 /* Mobile */
-@media (max-width: 480px) {
-  .icecream-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
+
 
 
 /* Vista móvil */
