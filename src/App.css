@@ -170,8 +170,27 @@ a {
 }
 
 /* Tablet */
+
+/* Vista de detalles responsive */
 @media (max-width: 768px) {
 
+  .details-card {
+    margin: 10px auto;       /* menos margen arriba */
+    padding: 15px;
+    width: 100%;
+  }
+
+  .details-card > div {
+    flex-direction: column;  /* imagen arriba, texto abajo */
+    align-items: center;
+    text-align: center;
+  }
+
+  .details-card img {
+    width: 100%;             /* ocupa el ancho del móvil */
+    height: auto;            /* mantiene proporción */
+    max-width: 350px;        /* tamaño razonable */
+  }
   .hamburger {
     display: block;
   }
@@ -189,6 +208,7 @@ a {
     gap: 15px;
   }
 }
+
 
 /* Mobile */
 
