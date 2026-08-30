@@ -60,25 +60,29 @@ a {
 
 /* -------------------- CAROUSEL -------------------- */
 .ice-carousel {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
   overflow: hidden;
   background-color: #FB9DA7;
+
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  padding: 20px 0; /* opcional, queda más bonito */
 }
 
+
 .ice-carousel img {
-  margin: 0 auto;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px; /* ajusta el tamaño máximo */
   height: 350px;
   object-fit: cover;
   display: block;
+  justify-self: center;
   mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
+
 
 
 /* Caption */
@@ -140,22 +144,22 @@ body {
 .icecream-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 250px));
-  gap: 100px;
-
+  grid-template-columns: repeat(auto-fill, minmax(180px, 250px));
+  gap: 80px;
   justify-content: center;
 }
 
 
 
-
-
 .card-icecream {
-  width: 250px;          /* igual que el SVG */
+  width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centra todo */
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
 }
+
 
 
 .img-default {
@@ -392,11 +396,13 @@ h2 {
   padding: 40px;
 }
 
+
 .curveado {
-  font-size: 26px;          /* más pequeño que un h2 normal */
-  font-weight: bold;
+  
   font-family: 'Comic Sans MS', cursive;
-  fill: #ca497a;
+  font-size: 22px;
+  font-weight: bold;
+  fill: #b62e55;
   text-shadow:
     -2px -2px 0 #ffffff,
      2px -2px 0 #ffffff,
