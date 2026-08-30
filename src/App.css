@@ -145,7 +145,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 250px));
-  gap: 60px;
+  gap: 70px;
   justify-content: center;
 }
 
