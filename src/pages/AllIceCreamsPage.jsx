@@ -43,54 +43,65 @@ function AllIceCreamsPage() {
   if (error) return <p className="error">{error}</p>;
 
   return (
-    <div className="icecreams">
-      <IceCreamListPage iceCreams={iceCreams} onFilter={setFiltered} />
+    <div className="icecream-wrapper">
 
-      <h1>All Ice Creams</h1>
+  <IceCreamListPage
+    iceCreams={iceCreams}
+    onFilter={setFiltered}
+  />
 
-      {filtered.length === 0 && <p>No ice creams found</p>}
+  <h1>All Ice Creams</h1>
 
-      <div className="icecream-container">
-        {filtered.map((iceCream) => (
-          <div key={iceCream.id} className="card-icecream">
-            <svg width="340" height="70">
+  {filtered.length === 0 && <p>No ice creams found</p>}
 
+  <div className="icecream-container-wrapper">
+    <div className="icecream-container">
+      {filtered.map((iceCream) => (
+        <div key={iceCream.id} className="card-icecream">
 
+          <svg width="340" height="70">
 
   <defs>
     <path id="curvaH2" d="M0,50 Q170,0 340,50" />
 
-
-
   </defs>
 
-  <text class="curveado">
-    <textPath href="#curvaH2" startOffset="50%" text-anchor="middle">
+  <text className="curveado">
+    <textPath href="#curvaH2" startOffset="50%" textAnchor="middle">
       {iceCream.name}
     </textPath>
   </text>
 </svg>
 
 
+          <Link to={`/icecreams/${iceCream.id}`}>
+            <img
+              className="img-default"
+              src={iceCream.img}
+              alt={iceCream.name}
+            />
+          </Link>
 
-            <Link to={`/icecreams/${iceCream.id}`}>
-              <img className="img-default" src={iceCream.img} alt={iceCream.name} />
+          <p><span>Price:</span> {iceCream.price}$</p>
+          <p><span>Stock:</span> {iceCream.stock}</p>
+
+          <div>
+            <Link to={`/edit-icecream/${iceCream.id}`}>
+              <button>Edit</button>
             </Link>
 
-            <p><span>Price:</span> {iceCream.price}$</p>
-            <p><span>Stock:</span> {iceCream.stock}</p>
-
-            <div>
-              <Link to={`/edit-icecream/${iceCream.id}`}>
-                <button>Edit</button>
-              </Link>
-
-              <button onClick={() => handleDelete(iceCream.id)}>Delete</button>
-            </div>
+            <button onClick={() => handleDelete(iceCream.id)}>
+              Delete
+            </button>
           </div>
-        ))}
-      </div>
+
+        </div>
+      ))}
     </div>
+  </div>
+
+</div>
+
   );
 }
 
