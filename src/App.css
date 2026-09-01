@@ -128,18 +128,6 @@ body {
   overflow-x: hidden;
 }
 
-.icecream-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.icecream-container-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 
 .icecream-container {
   width: 100%;
@@ -417,9 +405,4 @@ h2 {
 
 .home-page {
   flex: fit-content;
-}
-
-.icecreams {
-  display: flex;
-  flex-direction: column;
 }

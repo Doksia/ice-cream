@@ -43,7 +43,7 @@ function AllIceCreamsPage() {
   if (error) return <p className="error">{error}</p>;
 
   return (
-    <div className="icecream-wrapper">
+    <div>
 
   <IceCreamListPage
     iceCreams={iceCreams}
